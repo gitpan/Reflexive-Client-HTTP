@@ -3,8 +3,32 @@ Changes from 1738-12-16 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.002 at 2012-09-29 05:49:07 +0000
+version 0.003 at 2012-09-29 07:16:02 +0000
 ------------------------------------------
+
+  Change: 2c80d3cdf55453ca4231442bcbc7adca101a01be
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-09-29 09:15:50 +0000
+
+    Dont need Reflex::POE::Event 
+
+  Change: e1c4ca156c6869d54deef00ae71357604c7e6b28
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-09-29 09:08:04 +0000
+
+    Added documentation for the role and added eg/ example to synopsis 
+
+  Change: e30d1b3336b6bf6e24466f829684d604e45473de
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-09-29 09:00:02 +0000
+
+    Added Reflexive::Client::HTTP::Role 
+
+  Change: fa7cba723c9b1d4a585ccfe97c8215732add2610
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-09-29 08:19:16 +0000
+
+    little pod changes 
 
   Change: 17d178adea796910e44d60c030816622f8a10f3b
   Author: Torsten Raudssus <torsten@raudss.us>

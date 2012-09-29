@@ -8,7 +8,9 @@ README
 dist.ini
 eg/coderef.pl
 eg/promise.pl
+eg/role.pl
 lib/Reflexive/Client/HTTP.pm
 lib/Reflexive/Client/HTTP/ResponseEvent.pm
+lib/Reflexive/Client/HTTP/Role.pm
 t/00-load.t
 t/release-pod-syntax.t

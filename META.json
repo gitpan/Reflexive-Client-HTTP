@@ -1,5 +1,5 @@
 {
-   "abstract" : "A Reflex HTTP Client",
+   "abstract" : "A Reflex(ive) HTTP Client",
    "author" : [
       "Torsten Raudssus <torsten@raudss.us>"
    ],
@@ -43,7 +43,7 @@
          "web" : "https://github.com/Getty/p5-reflexive-client-http"
       }
    },
-   "version" : "0.002",
+   "version" : "0.003",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

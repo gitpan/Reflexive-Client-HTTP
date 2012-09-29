@@ -3,9 +3,9 @@ BEGIN {
   $Reflexive::Client::HTTP::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Reflexive::Client::HTTP::VERSION = '0.002';
+  $Reflexive::Client::HTTP::VERSION = '0.003';
 }
-# ABSTRACT: A Reflex HTTP Client
+# ABSTRACT: A Reflex(ive) HTTP Client
 
 our $VERSION ||= '0.000';
 
@@ -185,11 +185,11 @@ __END__
 
 =head1 NAME
 
-Reflexive::Client::HTTP - A Reflex HTTP Client
+Reflexive::Client::HTTP - A Reflex(ive) HTTP Client
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -206,7 +206,9 @@ version 0.002
 
 =head1 DESCRIPTION
 
-Reflexive::Client::HTTP is an HTTP user-agent for L<Reflex>.
+Reflexive::Client::HTTP is an HTTP user-agent for L<Reflex>. At the current
+state it is only a wrapper around L<POE::Component::Client::HTTP>, but we will
+try to assure stability to the API.
 
 =head1 ATTRIBUTES
 
@@ -228,7 +230,7 @@ normal circumstances, it should be left to its default value: "HTTP/1.1".
 
 =head2 timeout
 
-So far see L<POE::Component::Client::HTTP/timeout>.
+So far see L<POE::Component::Client::HTTP/Timeout>.
 
 =head2 max_size
 
@@ -246,14 +248,14 @@ redirects at all.
 
 If redirects are followed, a response chain should be built, and can be
 accessed through $event->response->previous() or $_->previous() if you use a
-callback on L</request>. See HTTP::Response for details here.
+callback on L</request>. See L<HTTP::Response> for details here.
 
 =head2 proxy
 
 C<proxy> specifies one or more proxy hosts that requests will be passed
-through.  If not specified, proxy servers will be taken from the HTTP_PROXY
-(or http_proxy) environment variable. No proxying will occur unless C<proxy>
-is set or one of the environment variables exists.
+through.  If not specified, proxy servers will be taken from the B<HTTP_PROXY>
+(or B<http_proxy>) environment variable. No proxying will occur unless
+C<proxy> is set or one of the environment variables exists.
 
 The proxy can be specified either as a host and port, or as one or more URLs.
 C<proxy> URLs must specify the proxy port, even if it is 80.
@@ -262,7 +264,7 @@ C<proxy> URLs must specify the proxy port, even if it is 80.
   proxy => "http://127.0.0.1:80/",
 
 C<proxy> may specify multiple proxies separated by commas.
-Reflexive::Client::HTTP will choose proxies from this list at random. This is
+L<Reflexive::Client::HTTP> will choose proxies from this list at random. This is
 useful for load balancing requests through multiple gateways.
 
   proxy => "http://127.0.0.1:80/,http://127.0.0.1:81/",
@@ -271,7 +273,7 @@ useful for load balancing requests through multiple gateways.
 
 C<no_proxy> specifies a list of server hosts that will not be proxied. It is
 useful for local hosts and hosts that do not properly support proxying. If
-C<no_proxy> is not specified, a list will be taken from the NO_PROXY
+C<no_proxy> is not specified, a list will be taken from the B<NO_PROXY>
 environment variable.
 
   no_proxy => [ "localhost", "127.0.0.1" ],
@@ -279,8 +281,7 @@ environment variable.
 
 =head2 bind_addr
 
-Specify C<bind_addr> to bind all client sockets to a particular local
-address.
+Specify C<bind_addr> to bind all client sockets to a particular local address.
 
 =head1 METHODS
 
@@ -299,6 +300,14 @@ B<$_> to the L<HTTP::Response> object.
 
 If you require access to the L<HTTP::Request> object via this method, you need
 to apply it as one of your arguments yourself on the call of C<request>
+
+=head1 SEE ALSO
+
+L<Reflexive::Client::HTTP::Role>
+
+L<HTTP::Request> L<HTTP::Response>
+
+L<Reflex>
 
 =head1 THANKS
 

@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "A Reflex HTTP Client",
+  "ABSTRACT" => "A Reflex(ive) HTTP Client",
   "AUTHOR" => "Torsten Raudssus <torsten\@raudss.us>",
   "BUILD_REQUIRES" => {
     "Test::LoadAllModules" => "0.021",
@@ -28,7 +28,7 @@ my %WriteMakefileArgs = (
     "POE::Component::Client::HTTP" => "0.947",
     "Reflex" => "0.098"
   },
-  "VERSION" => "0.002",
+  "VERSION" => "0.003",
   "test" => {
     "TESTS" => "t/*.t"
   }

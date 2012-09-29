@@ -3,7 +3,7 @@ BEGIN {
   $Reflexive::Client::HTTP::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Reflexive::Client::HTTP::VERSION = '0.001';
+  $Reflexive::Client::HTTP::VERSION = '0.002';
 }
 # ABSTRACT: A Reflex HTTP Client
 
@@ -99,10 +99,10 @@ sub BUILD {
 		Agent => $self->agent,
 		$self->has_from ? ( From => $self->from ) : (),
 		$self->has_protocol ? ( Protocol => $self->protocol ) : (),
-		$self->has_max_size ? ( Protocol => $self->protocol ) : (),
-		$self->has_timeout ? ( Protocol => $self->protocol ) : (),
-		$self->has_follow_redirects ? ( Protocol => $self->protocol ) : (),
-		$self->has_proxy ? ( Protocol => $self->protocol ) : (),
+		$self->has_max_size ? ( MaxSize => $self->max_size ) : (),
+		$self->has_timeout ? ( Timeout => $self->timeout ) : (),
+		$self->has_follow_redirects ? ( FollowRedirects => $self->follow_redirects ) : (),
+		$self->has_proxy ? ( Proxy => $self->proxy ) : (),
 		$self->has_no_proxy ? ( NoProxy => $self->no_proxy ) : (),
 		$self->has_bind_addr ? ( BindAddr => $self->bind_addr ) : (),
 
@@ -189,7 +189,7 @@ Reflexive::Client::HTTP - A Reflex HTTP Client
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 

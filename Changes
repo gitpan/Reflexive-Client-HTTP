@@ -3,8 +3,14 @@ Changes from 1738-12-16 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.001 at 2012-09-29 05:29:38 +0000
+version 0.002 at 2012-09-29 05:49:07 +0000
 ------------------------------------------
+
+  Change: 17d178adea796910e44d60c030816622f8a10f3b
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-09-29 07:48:49 +0000
+
+    Yeah of course, AFTER release i see that i wasnt done... sure... 
 
   Change: 090c9682950dcacac0f1845ae75679dd11ddd61b
   Author: Torsten Raudssus <torsten@raudss.us>

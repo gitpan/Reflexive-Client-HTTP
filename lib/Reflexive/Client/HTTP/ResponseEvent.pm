@@ -3,7 +3,7 @@ BEGIN {
   $Reflexive::Client::HTTP::ResponseEvent::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Reflexive::Client::HTTP::ResponseEvent::VERSION = '0.001';
+  $Reflexive::Client::HTTP::ResponseEvent::VERSION = '0.002';
 }
 # ABSTRACT: A response event of a call with Reflexive::Client::HTTP
 
@@ -47,7 +47,7 @@ Reflexive::Client::HTTP::ResponseEvent - A response event of a call with Reflexi
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 ATTRIBUTES
 

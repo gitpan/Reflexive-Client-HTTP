@@ -1,0 +1,14 @@
+Changes
+LICENSE
+MANIFEST
+META.json
+META.yml
+Makefile.PL
+README
+dist.ini
+eg/coderef.pl
+eg/promise.pl
+lib/Reflexive/Client/HTTP.pm
+lib/Reflexive/Client/HTTP/ResponseEvent.pm
+t/00-load.t
+t/release-pod-syntax.t

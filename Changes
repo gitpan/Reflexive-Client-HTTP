@@ -1,0 +1,30 @@
+==================================================
+Changes from 1738-12-16 00:00:00 +0000 to present.
+==================================================
+
+------------------------------------------
+version 0.001 at 2012-09-29 05:29:38 +0000
+------------------------------------------
+
+  Change: 090c9682950dcacac0f1845ae75679dd11ddd61b
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-09-29 07:25:09 +0000
+
+    Copied tons of documentation from POE::Component::Client::HTTP, added
+    more documentation for the own attributes and method, added synopsis 
+
+  Change: 64baa177ad6a10600734c2391e1bccc94583f1c9
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-09-29 06:44:43 +0000
+
+    First working release 
+
+  Change: ba6c9f00a416e4e99745b2b304ce40d88f1cb0f2
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-09-29 01:09:18 +0000
+
+    initial commit 
+
+================
+End of releases.
+================

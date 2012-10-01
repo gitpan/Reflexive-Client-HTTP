@@ -3,7 +3,7 @@ BEGIN {
   $Reflexive::Client::HTTP::Role::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Reflexive::Client::HTTP::Role::VERSION = '0.003';
+  $Reflexive::Client::HTTP::Role::VERSION = '0.004';
 }
 # ABSTRACT: A role for automatically getting a watched Reflexive::Client::HTTP
 
@@ -44,7 +44,7 @@ Reflexive::Client::HTTP::Role - A role for automatically getting a watched Refle
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 
@@ -52,8 +52,6 @@ version 0.003
     package MySampleClient;
 
     use Moose;
-    extends 'Reflex::Base';
-
     with 'Reflexive::Client::HTTP::Role';
 
     sub on_http_response {

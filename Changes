@@ -1,10 +1,40 @@
 ==================================================
-Changes from 1738-12-16 00:00:00 +0000 to present.
+Changes from 1738-12-18 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.003 at 2012-09-29 07:16:02 +0000
+version 0.004 at 2012-10-01 04:28:05 +0000
 ------------------------------------------
+
+  Change: a9ddf9d4720e7ae2dbe8e875120e45795d020eaa
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-10-01 02:33:07 +0000
+
+    Yes of course, Role's arent immutable..., Tuned emit_response 
+
+  Change: b44d1ea3bcdbaefa17a53931b8a38a658d0ddf6b
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-09-29 23:08:58 +0000
+
+    Added emit_response 
+
+  Change: 1b1404b67994cc1837ea7e9de3683a27e113cb64
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-09-29 09:35:21 +0000
+
+    added __PACKAGE__->meta->make_immutable; 
+
+  Change: bb366553f1c06fd71ecc3bcda3dfd855f60ef02f
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-09-29 09:33:14 +0000
+
+    Yeah of course, i dont need Reflex::Base on usage of the role 
+
+  Change: 2f60af87725f1a7e270059ccbc49701ed96dbd0f
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-09-29 09:29:58 +0000
+
+    pod fixes, moved the loaded classes around 
 
   Change: 2c80d3cdf55453ca4231442bcbc7adca101a01be
   Author: Torsten Raudssus <torsten@raudss.us>

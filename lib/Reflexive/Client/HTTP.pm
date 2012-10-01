@@ -3,7 +3,7 @@ BEGIN {
   $Reflexive::Client::HTTP::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Reflexive::Client::HTTP::VERSION = '0.003';
+  $Reflexive::Client::HTTP::VERSION = '0.004';
 }
 # ABSTRACT: A Reflex(ive) HTTP Client
 
@@ -16,6 +16,9 @@ extends 'Reflex::Base';
 use POE::Component::Client::HTTP;
 use Reflex::POE::Event;
 use Reflexive::Client::HTTP::ResponseEvent;
+
+use HTTP::Request;
+use HTTP::Response;
 
 use Carp qw( croak );
 
@@ -165,17 +168,22 @@ sub _internal_http_response {
 			$callback->(@request_args);
 		}
 	} else {
-		$self->emit(
-			-name    => 'response',
-
-			-type    => 'Reflexive::Client::HTTP::ResponseEvent',
-			request  => $request->[0],
-			response => $response->[0],
-
-			@request_args ? ( args => [@request_args] ) : (),
-		);
+		$self->emit_response($request->[0],$response->[0],@request_args);
 	}
 }
+
+sub emit_response {
+	my ( $self, $request, $response, @args ) = @_;
+	$self->emit(
+		-name => 'response',
+		-type    => 'Reflexive::Client::HTTP::ResponseEvent',
+		request  => $request,
+		response => $response,
+		@args ? ( args => [@args] ) : (),
+	);
+}
+
+__PACKAGE__->meta->make_immutable;
 
 1;
 
@@ -189,7 +197,7 @@ Reflexive::Client::HTTP - A Reflex(ive) HTTP Client
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 

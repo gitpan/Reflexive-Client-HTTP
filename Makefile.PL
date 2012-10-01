@@ -28,7 +28,7 @@ my %WriteMakefileArgs = (
     "POE::Component::Client::HTTP" => "0.947",
     "Reflex" => "0.098"
   },
-  "VERSION" => "0.003",
+  "VERSION" => "0.004",
   "test" => {
     "TESTS" => "t/*.t"
   }

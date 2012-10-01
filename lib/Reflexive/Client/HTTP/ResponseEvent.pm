@@ -3,15 +3,12 @@ BEGIN {
   $Reflexive::Client::HTTP::ResponseEvent::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Reflexive::Client::HTTP::ResponseEvent::VERSION = '0.003';
+  $Reflexive::Client::HTTP::ResponseEvent::VERSION = '0.004';
 }
 # ABSTRACT: A response event of a call with Reflexive::Client::HTTP
 
 use Moose;
 extends 'Reflex::Event';
-
-use HTTP::Request;
-use HTTP::Response;
 
 
 has request => (
@@ -47,15 +44,17 @@ Reflexive::Client::HTTP::ResponseEvent - A response event of a call with Reflexi
 
 =head1 VERSION
 
-version 0.003
+version 0.004
+
+=head1 DESCRIPTION
 
 =head1 ATTRIBUTES
 
-=head2
+=head2 request
 
 L<HTTP::Request> object of the event.
 
-=head2
+=head2 response
 
 L<HTTP::Response> object of the given L</request>.
 

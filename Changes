@@ -1,10 +1,29 @@
 ==================================================
-Changes from 1738-12-18 00:00:00 +0000 to present.
+Changes from 1738-12-19 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.004 at 2012-10-01 04:28:05 +0000
+version 0.005 at 2012-10-02 04:49:07 +0000
 ------------------------------------------
+
+  Change: 1e7ee9ae087b2167b8d5d49fdaa40d3109d1d6f7
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-10-02 06:48:33 +0000
+
+    Added chain documentation, 2 examples inside request, disabled buffer
+    in testscripts and added FindBin usage 
+
+  Change: c680758f1f9c0b5c6168e4ed2ad8fe79df095e5c
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-10-02 04:51:24 +0000
+
+    Fixed rights 
+
+  Change: ed516d4379a71abb68830b2d8a71e31196ea27b0
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-10-02 04:51:01 +0000
+
+    Added chain feature (undocumented yet) 
 
   Change: a9ddf9d4720e7ae2dbe8e875120e45795d020eaa
   Author: Torsten Raudssus <torsten@raudss.us>

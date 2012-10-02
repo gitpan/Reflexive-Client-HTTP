@@ -3,7 +3,7 @@ BEGIN {
   $Reflexive::Client::HTTP::Role::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Reflexive::Client::HTTP::Role::VERSION = '0.004';
+  $Reflexive::Client::HTTP::Role::VERSION = '0.005';
 }
 # ABSTRACT: A role for automatically getting a watched Reflexive::Client::HTTP
 
@@ -44,7 +44,7 @@ Reflexive::Client::HTTP::Role - A role for automatically getting a watched Refle
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 SYNOPSIS
 

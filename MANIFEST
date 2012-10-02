@@ -6,6 +6,7 @@ META.yml
 Makefile.PL
 README
 dist.ini
+eg/chain.pl
 eg/coderef.pl
 eg/promise.pl
 eg/role.pl

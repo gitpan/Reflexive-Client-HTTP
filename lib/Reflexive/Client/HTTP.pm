@@ -3,7 +3,7 @@ BEGIN {
   $Reflexive::Client::HTTP::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Reflexive::Client::HTTP::VERSION = '0.004';
+  $Reflexive::Client::HTTP::VERSION = '0.005';
 }
 # ABSTRACT: A Reflex(ive) HTTP Client
 
@@ -165,7 +165,10 @@ sub _internal_http_response {
 	if (defined $request_args[0] && ref $request_args[0] eq 'CODE') {
 		my $callback = shift @request_args;
 		for ($response->[0]) {
-			$callback->(@request_args);
+			my @return = $callback->(@request_args);
+			if (@return && ref $return[0] eq 'HTTP::Request') {
+				$self->request(@return);
+			}
 		}
 	} else {
 		$self->emit_response($request->[0],$response->[0],@request_args);
@@ -197,7 +200,7 @@ Reflexive::Client::HTTP - A Reflex(ive) HTTP Client
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 SYNOPSIS
 
@@ -306,8 +309,27 @@ L<Reflexive::Client::HTTP::ResponseEvent>. It gets all other additional
 arguments of the C<request> call given as own arguments. Additionall we set
 B<$_> to the L<HTTP::Response> object.
 
+  $ua->request( HTTP::Request->new( GET => "http://duckduckgo.com/" ), sub {
+    print "DuckDuckGo gave me ".$_->code."\n";
+  });
+
 If you require access to the L<HTTP::Request> object via this method, you need
 to apply it as one of your arguments yourself on the call of C<request>
+
+A special feature of this fuction is the option to directly chain it. If you
+are using the CodeRef callback, you can return a new L<HTTP::Request> from
+this CodeRef together with a new CodeRef and more arguments, to trigger
+another request for another callback.
+
+  $ua->request( HTTP::Request->new( GET => "http://duckduckgo.com/" ), sub {
+    print "DuckDuckGo gave me ".$_->code."\n";
+    return HTTP::Request->new( GET => "http://perl.org/" ), sub {
+      print "Perl gave me ".$_->code."\n";
+      return HTTP::Request->new( GET => "http://metacpan.org/" ), sub {
+        print "MetaCPAN gave me ".$_->code."\n";
+      };
+    };
+  });
 
 =head1 SEE ALSO
 

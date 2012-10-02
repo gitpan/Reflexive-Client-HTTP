@@ -3,6 +3,7 @@ abstract: 'A Reflex(ive) HTTP Client'
 author:
   - 'Torsten Raudssus <torsten@raudss.us>'
 build_requires:
+  Test::HTTP::Server: 0.03
   Test::LoadAllModules: 0.021
   Test::More: 0.98
 configure_requires:
@@ -22,7 +23,7 @@ requires:
 resources:
   homepage: https://github.com/Getty/p5-reflexive-client-http
   repository: https://github.com/Getty/p5-reflexive-client-http.git
-version: 0.005
+version: 0.006
 x_Dist_Zilla:
   perl:
     version: 5.014002

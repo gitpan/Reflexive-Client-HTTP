@@ -29,6 +29,7 @@
       },
       "test" : {
          "requires" : {
+            "Test::HTTP::Server" : "0.03",
             "Test::LoadAllModules" : "0.021",
             "Test::More" : "0.98"
          }
@@ -43,7 +44,7 @@
          "web" : "https://github.com/Getty/p5-reflexive-client-http"
       }
    },
-   "version" : "0.005",
+   "version" : "0.006",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.014002"

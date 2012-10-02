@@ -3,8 +3,20 @@ Changes from 1738-12-19 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.005 at 2012-10-02 04:49:07 +0000
+version 0.006 at 2012-10-02 06:06:21 +0000
 ------------------------------------------
+
+  Change: f44e52f5ed7c0d139d00452a7c7b2d3606496bba
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-10-02 08:06:02 +0000
+
+    Hups, wrong ending leads to not getting executed.... 
+
+  Change: 8c33945e7851811e7769d539d0f8ab856eb4e36c
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-10-02 07:55:00 +0000
+
+    Added much more tests via Test::HTTP::Server, great module 
 
   Change: 1e7ee9ae087b2167b8d5d49fdaa40d3109d1d6f7
   Author: Torsten Raudssus <torsten@raudss.us>

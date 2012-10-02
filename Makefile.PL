@@ -12,6 +12,7 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "A Reflex(ive) HTTP Client",
   "AUTHOR" => "Torsten Raudssus <torsten\@raudss.us>",
   "BUILD_REQUIRES" => {
+    "Test::HTTP::Server" => "0.03",
     "Test::LoadAllModules" => "0.021",
     "Test::More" => "0.98"
   },
@@ -28,7 +29,7 @@ my %WriteMakefileArgs = (
     "POE::Component::Client::HTTP" => "0.947",
     "Reflex" => "0.098"
   },
-  "VERSION" => "0.005",
+  "VERSION" => "0.006",
   "test" => {
     "TESTS" => "t/*.t"
   }

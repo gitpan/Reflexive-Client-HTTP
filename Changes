@@ -1,10 +1,17 @@
 ==================================================
-Changes from 1738-12-19 00:00:00 +0000 to present.
+Changes from 1738-12-21 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.006 at 2012-10-02 06:06:21 +0000
+version 0.007 at 2012-10-04 01:27:33 +0000
 ------------------------------------------
+
+  Change: 426678b069d6d7bda97f3b45b8969f2a2b1e0a88
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2012-10-04 03:27:14 +0000
+
+    Fixed tests after failing reports, cause of possible randomness of
+    responses in promise test 
 
   Change: f44e52f5ed7c0d139d00452a7c7b2d3606496bba
   Author: Torsten Raudssus <torsten@raudss.us>
